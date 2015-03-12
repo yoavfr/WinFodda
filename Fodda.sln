@@ -1,0 +1,60 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fodda", "Fodda\Fodda.csproj", "{46A86567-AA0D-4277-81F7-C2B9FACB1789}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shell", "Shell\Shell.vcxproj", "{354B644F-3B93-4739-9A66-9703478536BC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.0.0.1:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = Shell\\Shell.vcxproj
+		SccProjectName0 = Shell
+		SccLocalPath0 = Shell
+		SccProjectUniqueName1 = Fodda\\Fodda.csproj
+		SccProjectName1 = Fodda
+		SccLocalPath1 = Fodda
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Debug|Win32.ActiveCfg = Debug|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Debug|x86.ActiveCfg = Debug|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Debug|x86.Build.0 = Debug|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Release|Any CPU.ActiveCfg = Release|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Release|Mixed Platforms.Build.0 = Release|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Release|Win32.ActiveCfg = Release|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Release|x86.ActiveCfg = Release|x86
+		{46A86567-AA0D-4277-81F7-C2B9FACB1789}.Release|x86.Build.0 = Release|x86
+		{354B644F-3B93-4739-9A66-9703478536BC}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Debug|Win32.Build.0 = Debug|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Debug|x86.ActiveCfg = Debug|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Release|Any CPU.ActiveCfg = Release|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Release|Win32.ActiveCfg = Release|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Release|Win32.Build.0 = Release|Win32
+		{354B644F-3B93-4739-9A66-9703478536BC}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
