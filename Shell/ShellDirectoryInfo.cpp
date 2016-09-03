@@ -97,14 +97,15 @@ namespace Fodda
 
 		property String^ FullName
 		{
-			String ^ get()
+			String^ get()
 			{
 				HRESULT hr;
 				STRRET strDispName;
 
 				if ((hr = m_pParentShellFolder->GetDisplayNameOf(m_pidl, SHGDN_FORPARSING | SHGDN_FORADDRESSBAR, &strDispName)) != S_OK)
 				{
-					// this reports failure and succeeds - ignore
+					// this reports failure - ignore, return empty string
+					return String::Empty;
 					//throw gcnew Exception(String::Format(L"Failed to get display name for directory. 0x{0:X8}",hr));
 				}
 
@@ -123,13 +124,13 @@ namespace Fodda
 
 		}
 
-		array<ShellDirectoryInfo^> ^GetDirectories()
+		cli::array<ShellDirectoryInfo^> ^GetDirectories()
 		{
 			HRESULT hr;
 			LPENUMIDLIST pEnumIDL = NULL; // IEnumIDList interface for reading contents
 			LPITEMIDLIST pidl; 	
 
-			List<ShellDirectoryInfo^> directoryList = gcnew List<ShellDirectoryInfo^>();
+			List<ShellDirectoryInfo^>^ directoryList = gcnew List<ShellDirectoryInfo^>();
 			if ((hr = m_pShellFolder->EnumObjects(NULL, SHCONTF_FOLDERS | SHCONTF_INCLUDEHIDDEN, &pEnumIDL)) != S_OK)
 			{
 				throw gcnew Exception(String::Format(L"Failed to enumerate sub directories. 0x{0:X8}",hr));
@@ -143,20 +144,20 @@ namespace Fodda
 				}
 				
 				ShellDirectoryInfo ^childFolder = gcnew ShellDirectoryInfo(m_pShellFolder, pidl);
-				directoryList.Add(childFolder);
+				directoryList->Add(childFolder);
 				hr = pEnumIDL->Next(1, &pidl, NULL);
 			}
 			pEnumIDL->Release();
-			return directoryList.ToArray();
+			return directoryList->ToArray();
 		}
 		
-		array<ShellFileInfo^> ^ShellDirectoryInfo::GetFiles()
+		cli::array<ShellFileInfo^> ^ShellDirectoryInfo::GetFiles()
 		{
 			HRESULT hr;
 			LPENUMIDLIST pEnumIDL = NULL; // IEnumIDList interface for reading contents
 			LPITEMIDLIST pidl; 	
 			
-			List<ShellFileInfo^> directoryList = gcnew List<ShellFileInfo^>();
+			List<ShellFileInfo^>^ directoryList = gcnew List<ShellFileInfo^>();
 			if ((hr = m_pShellFolder->EnumObjects(NULL, SHCONTF_NONFOLDERS | SHCONTF_INCLUDEHIDDEN, &pEnumIDL)) != S_OK)
 			{
 				throw gcnew Exception(String::Format(L"Failed to enumerate files in directory. 0x{0:X8}",hr));
@@ -169,11 +170,11 @@ namespace Fodda
 					break;
 				}
 				ShellFileInfo ^file = gcnew ShellFileInfo(this, pidl);
-				directoryList.Add(file);
+				directoryList->Add(file);
 				hr = pEnumIDL->Next(1, &pidl, NULL);
 			}
 			pEnumIDL->Release();
-			return directoryList.ToArray();
+			return directoryList->ToArray();
 		}
 	};
 }

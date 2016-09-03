@@ -35,8 +35,9 @@ namespace Fodda
 			STRRET strDispName;
 			if ((hr = m_Parent->ShellFolder->GetDisplayNameOf(m_pidl, SHGDN_FORPARSING | SHGDN_FORADDRESSBAR, &strDispName)) != S_OK)
 			{
-				// this reports failure and succeeds - ignore
+				// this reports failure - ignore
 				//throw gcnew Exception(String::Format(L"Failed to get display name. 0x{0:X8}",hr));
+				return String::Empty;
 			}
 
 			switch (strDispName.uType) 
@@ -113,7 +114,7 @@ namespace Fodda
 			destinationStream->Release();
 
 			Marshal::FreeHGlobal(ptr);
-			CoTaskMemFree(sourceStream);
+			//CoTaskMemFree(sourceStream);
 			//m_pMalloc->Free(sourceStream);
 			//m_pMalloc->Free(destinationStream);
 		}
