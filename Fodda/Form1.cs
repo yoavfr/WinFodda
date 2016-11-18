@@ -283,5 +283,9 @@ namespace Fodda
             return (Image)b;
         }
 
+        private void IgnorePreviouslyImportedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

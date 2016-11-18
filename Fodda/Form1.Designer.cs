@@ -110,10 +110,11 @@
             this.IgnorePreviouslyImportedCheckBox.AutoSize = true;
             this.IgnorePreviouslyImportedCheckBox.Location = new System.Drawing.Point(79, 85);
             this.IgnorePreviouslyImportedCheckBox.Name = "IgnorePreviouslyImportedCheckBox";
-            this.IgnorePreviouslyImportedCheckBox.Size = new System.Drawing.Size(149, 17);
+            this.IgnorePreviouslyImportedCheckBox.Size = new System.Drawing.Size(109, 17);
             this.IgnorePreviouslyImportedCheckBox.TabIndex = 9;
-            this.IgnorePreviouslyImportedCheckBox.Text = "Ignore previously imported";
+            this.IgnorePreviouslyImportedCheckBox.Text = "Overwrite existing";
             this.IgnorePreviouslyImportedCheckBox.UseVisualStyleBackColor = true;
+            this.IgnorePreviouslyImportedCheckBox.CheckedChanged += new System.EventHandler(this.IgnorePreviouslyImportedCheckBox_CheckedChanged);
             // 
             // groupBox1
             // 

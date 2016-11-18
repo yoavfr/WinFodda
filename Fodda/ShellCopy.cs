@@ -121,7 +121,14 @@ namespace Fodda
                 {
                     String directoryName = Path.Combine(DestinationDirectory, DirectoryNameFactory.GetDirectoryName(creationTime));
                     DebugOutput.DebugPrint(String.Format("{0} -> {1}", file.FullName, directoryName));
-                    ImageDisplay.Display(file.GetThumbnail(ImageDisplay.ImageSize));
+                    try
+                    {
+                        ImageDisplay.Display(file.GetThumbnail(ImageDisplay.ImageSize));
+                    }
+                    catch (Exception e)
+                    {
+                        DebugOutput.DebugPrint(string.Format("Failed to display image of {0}/{1}", directoryName, file.FullName));
+                    }
                     Directory.CreateDirectory(directoryName);
                     file.CopyTo(Path.Combine(directoryName, fileName));
                     TransferredItems.Add(creationTime, fileName);
